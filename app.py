@@ -101,26 +101,24 @@ def videoInput(device, src):
 
 def main():
     # -- Sidebar
-    st.sidebar.title('⚙️Options')
-    datasrc = st.sidebar.radio("Select input source.", ['From test set.', 'Upload your own data.'])
-    
-        
-                
+    st.sidebar.title('Choose Your Test Case Below')
+
+    datasrc = st.sidebar.radio("Select input source.", ['From test set.', 'Upload your own data.'])            
     option = st.sidebar.radio("Select input type.", ['Image', 'Video'])
+    
     if torch.cuda.is_available():
         deviceoption = st.sidebar.radio("Select compute Device.", ['cpu', 'cuda'], disabled = False, index=1)
     else:
         deviceoption = st.sidebar.radio("Select compute Device.", ['cpu', 'cuda'], disabled = True, index=0)
     # -- End of Sidebar
 
-    st.header('📦Obstacle Detection')
+    st.header('Current Model is YOLOv5m')
     st.subheader('👈🏽 Select options left-haned menu bar.')
-    st.sidebar.markdown("https://github.com/thepbordin/Obstacle-Detection-for-Blind-people-Deployment")
+    st.sidebar.markdown("https://github.com/sertannavdann")
     if option == "Image":    
         imageInput(deviceoption, datasrc)
     elif option == "Video": 
         videoInput(deviceoption, datasrc)
-
     
 
 if __name__ == '__main__':
