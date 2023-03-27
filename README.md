@@ -6,7 +6,7 @@
 ---
 
 <p align="center"> 🧩🧩🧩🧩 </p>
-* https://sertan-ozkan-yolov5m.streamlit.app/
+<p align="center"> https://sertan-ozkan-yolov5m.streamlit.app/ </p>
 <p align="center"> 🧩🧩🧩🧩 </p>
 
 ---
